@@ -1,5 +1,8 @@
 # TechDoctor Inventory Proposal
 
+1. What are you going to create?
+
+2. Why is it useful?
 
 
 ## Important Links
