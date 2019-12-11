@@ -80,3 +80,12 @@ class Part(models.Model):
 
         # Call save on the superclass.
         return super(Part, self).save(*args, **kwargs)
+
+    def was_published_recently(self): #better version
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
+
+    ## Adding description and allow the values to be sorted in the admin's list of parts
+    was_published_recently.admin_order_field = 'created'
+    was_published_recently.boolean = True
+    was_published_recently.short_description = 'Part created recently?'
