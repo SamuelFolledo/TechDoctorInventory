@@ -9,7 +9,7 @@ class PartInline(admin.TabularInline): #StackedInLine will have it stack, Tabula
 class DeviceAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['title']}),
-        ('Date information', {'fields': ['content'], 'classes': ['collapse']}),
+        # ('Date information', {'fields': ['created'], 'classes': ['collapse']}),
     ]
     inlines = [PartInline] #puts Parts in the same field
     list_display = ('title', 'created', 'was_published_recently') #displays these properties on showing lists of devices
@@ -18,5 +18,4 @@ class DeviceAdmin(admin.ModelAdmin):
 
 admin.site.register(Device, DeviceAdmin)
 
-# admin.site.register(Choice) #will create another thing, but if we want it in the same line (if they are related)
-# then we will want an StackedInLine
+admin.site.register(Part) #will create another thing, but if we want it in the same line (if they are related)
