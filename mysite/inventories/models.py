@@ -37,8 +37,17 @@ class Device(models.Model):
         # Call save on the superclass.
         return super(Device, self).save(*args, **kwargs)
 
+    def was_published_recently(self): #better version
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
-######################################################################
+    ## Adding description and allow the values to be sorted in the admin's list of devices
+    was_published_recently.admin_order_field = 'created'
+    was_published_recently.boolean = True
+    was_published_recently.short_description = 'Device created recently?'
+
+
+################################Samuel - Password1234 & admin - MakeSchool######################################
 ############################ Parts Model ############################
 class Part(models.Model):
     """ Represents a single part. """
