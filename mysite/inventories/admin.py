@@ -10,6 +10,7 @@ class DeviceAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['title']}),
         # ('Date information', {'fields': ['created'], 'classes': ['collapse']}),
+        ('Author',           {'fields': ['author']})
     ]
     inlines = [PartInline] #puts Parts in the same field
     list_display = ('title', 'created', 'was_published_recently') #displays these properties on showing lists of devices
