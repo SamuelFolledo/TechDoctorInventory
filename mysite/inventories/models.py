@@ -1,3 +1,5 @@
+import datetime
+
 from django.conf import settings
 from django.db import models
 from django.urls import reverse
@@ -39,7 +41,7 @@ class Device(models.Model):
 
     def was_published_recently(self): #better version
         now = timezone.now()
-        return now - datetime.timedelta(days=1) <= self.pub_date <= now
+        return now - datetime.timedelta(days=1) <= self.created <= now
 
     ## Adding description and allow the values to be sorted in the admin's list of devices
     was_published_recently.admin_order_field = 'created'
@@ -83,7 +85,7 @@ class Part(models.Model):
 
     def was_published_recently(self): #better version
         now = timezone.now()
-        return now - datetime.timedelta(days=1) <= self.pub_date <= now
+        return now - datetime.timedelta(days=1) <= self.created <= now
 
     ## Adding description and allow the values to be sorted in the admin's list of parts
     was_published_recently.admin_order_field = 'created'
