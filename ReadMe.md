@@ -5,3 +5,4 @@ Website for TechDoctor to keep track of inventories and repair schedules using D
 - [Proposal](https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/proposal.md)
 - [Contractor Requirements and Instructions](https://make-school-courses.github.io/BEW-1.2-Authentication-and-Associations/#/Projects/requirements)
 - [Contractor Rubric](https://make-school-courses.github.io/BEW-1.2-Authentication-and-Associations/#/Projects/rubric)
+- [Django Authentication Checklist](https://github.com/Make-School-Labs/makewiki-starter/blob/master/CHALLENGES.md#login--logout)
