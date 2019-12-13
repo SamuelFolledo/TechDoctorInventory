@@ -21,7 +21,7 @@ from inventories.models import Device, Part
 
 class DeviceListView(ListView): #current index
     model = Device
-    template_name = 'inventories/index.html'
+    template_name = 'inventories/device.html'
     # context_object_name = 'latest_device_list'
     context_object_name = 'device_list'
 
@@ -30,7 +30,7 @@ class DeviceListView(ListView): #current index
         # return Device.objects.filter( pub_date__lte=timezone.now() ).order_by('-created')[:20]
         devices = self.get_queryset().all() #get all devices
         context = { 'devices': devices }
-        return render(request, 'index.html', context)
+        return render(request, 'list.html', context)
 
 class DeviceDetailView(DetailView):
     model = Device
@@ -40,7 +40,7 @@ class DeviceDetailView(DetailView):
         # return Device.objects.filter(pub_date__lte=timezone.now())
         device = self.get_queryset().get(slug__iexact=slug)
         context = { 'device': device }
-        return render(request, 'page.html', context)
+        return render(request, 'device.html', context)
 
 class DeviceResultsView(DetailView):
     model = Device
