@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h3>Log In <small class="text-muted">to create your own wiki pages!</small></h3>
+    <h3>Log In <small class="text-muted">to create your repair requests!</small></h3>
     <hr>
     <div class="row">
         <div class="col">
@@ -11,9 +11,9 @@
 
             {% if next %}
                 {% if user.is_authenticated %}
-                    <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
+                    <p>Your account doesn't have access to this repair request page. To proceed, please login with an account that has access.</p>
                 {% else %}
-                    <p>Please login to see this page.</p>
+                    <p>Please login to see this repair request page.</p>
                 {% endif %}
             {% endif %}
 
