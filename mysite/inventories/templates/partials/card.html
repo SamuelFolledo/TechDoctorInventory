@@ -8,6 +8,7 @@
 
       <p class="card-text text-dark">
         {{ device.content|truncatewords_html:30 }}
+
         <hr>
         <div class="text-right"><a href="{% url 'device_inventory:device-detail' device.slug %}" title="See Repairs">See Repairs</a></div>
     </div>
