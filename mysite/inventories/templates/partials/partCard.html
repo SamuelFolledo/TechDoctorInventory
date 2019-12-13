@@ -1,0 +1,19 @@
+<div class="card mb-3">
+    <h5 class="card-header ">{{ part.title }}</h5>
+    <div class="card-body border-dark">
+
+    {% load static %}
+        <img src="{% static "iPhone7P.jpg" %}" alt="Part image">
+    <hr>
+
+    <p class="card-text text-dark">
+        {{ part.content|truncatewords_html:30 }}
+
+        <hr>
+        <div class="text-right"><a href="{% url 'device_inventory:device-results' part.slug %}" title="Request Repair">Request Repair</a></div>
+    </div>
+    <div class="card-footer">
+    <small class="text-muted">Last updated {{ part.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ part.author.username }}</b></small>
+    </div>
+  </div>
+    
