@@ -140,8 +140,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/assets')
 ]
 
-#To go to home after login instead of getting redirected to accounts/profile on login which is default
-LOGIN_REDIRECT_URL = ("/")
+# Where to redirect during authentication
+LOGIN_REDIRECT_URL = "/" #To go to home after login instead of getting redirected to accounts/profile on login which is default
+LOGOUT_REDIRECT_URL = "/" #To logout back to the home page instead of the default admin logout page
 
 # CONSTANTS
 INVENTORY_TITLE_MAX_LENGTH = 500
