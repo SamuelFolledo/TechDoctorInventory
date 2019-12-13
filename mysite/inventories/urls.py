@@ -16,10 +16,10 @@ urlpatterns = [
     # path('<int:question_id>/vote/', views.vote, name='vote'), # ex: /polls/5/vote/
     
     #Generic Views
-    path('', DeviceListView.as_view(), name='index'),
-    path('<str:slug>/', DeviceDetailView.as_view(), name='inventory-detail'),
-    path('<str:slug>/results/', DeviceResultsView.as_view(), name='inventory-results'),
+    path('', DeviceListView.as_view(), name='device-list'),
+    path('<str:slug>/', DeviceDetailView.as_view(), name='device-detail'),
+    path('<str:slug>/results/', DeviceResultsView.as_view(), name='device-results'),
     # path('<int:question_id>/vote/', views.vote, name='vote'),
     # path('wiki/create/', DeviceCreateView.as_view(), name='wiki-create-page'), #add soon
-    path('thanks/', DeviceDetailView.as_view(), name='inventory-thanks'),
+    path('thanks/', DeviceDetailView.as_view(), name='device-thanks'),
 ]
