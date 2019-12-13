@@ -7,6 +7,9 @@ from .models import Device, Part
 
 
 class DeviceModelTests(TestCase):
+    def test_true_is_true(self):
+        """ Tests if True is equal to True. Should always pass. """
+        self.assertEqual(True, True)
 
     def test_was_published_recently_with_future_question(self):
         """
@@ -33,8 +36,10 @@ class DeviceModelTests(TestCase):
         """
         time = timezone.now() - datetime.timedelta(hours=23, minutes=59, seconds=59)
         recent_device = Device(created=time)
-        self.assertIs(recent_device.was_published_recently(), True)
+        self.assertIs(recent_device.was_published_recently(), True)    
 
+
+############### PART Tests ###############
 class PartModelTests(TestCase):
 
     def test_was_published_recently_with_future_question(self):
