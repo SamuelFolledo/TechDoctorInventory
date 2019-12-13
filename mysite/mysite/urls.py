@@ -16,7 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+#static
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
+    #API
+
+    #Admin site
     path('admin/', admin.site.urls),
+
+    #Apps
     path('', include('inventories.urls')),
-]
+
+    # Authentication and other methods that comes with it
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls')),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
