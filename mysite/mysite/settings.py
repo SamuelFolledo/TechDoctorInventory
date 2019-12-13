@@ -30,6 +30,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Application definition
 INSTALLED_APPS = [
+    
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 'polls.apps.PollsConfig',
-    'inventories',
+    'inventories', #put inventories app first because on logout, since 'django.contrib.auth' comes first, logging out will redirect the page on admin logout page
+    'accounts',
 ]
 
 
