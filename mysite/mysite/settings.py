@@ -25,12 +25,12 @@ SECRET_KEY = '*wgm^oxm+*n)kff-jek#)do+^g9uk9b#oe9var296lk3@971n6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1:8000', '127.0.0.1'] #, 'sf-makewiki-v2.herokuapp.com']
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Application definition
-
 INSTALLED_APPS = [
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,7 +58,12 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+            # Always use forward slashes, even on Windows.
+            # Don't forget to use absolute paths, not relative paths.
+            os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,6 +127,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    # if os.getenv('IS_ON_HEROKU', False):
+    #     STATICFILE_DIRECTORY = 'static'
+    # else:
+    #     STATICFILE_DIRECTORY = 'static/assets'
+    # STATICFILES_DIRS = [
+    # os.path.join(BASE_DIR, STATICFILE_DIRECTORY)
+    # ]
+    os.path.join(BASE_DIR, 'static/assets')
+]
 
 
 # CONSTANTS
