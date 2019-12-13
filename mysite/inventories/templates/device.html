@@ -6,6 +6,8 @@
       <h3>{{ device.title }} <small class="text-muted">Last updated {{ device.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ device.author.username }}</b></small></h3>
       <hr>
       <p>{{ device.content|linebreaksbr }}</p>
+
+      <p>{{ parts }}</p>
       <hr>
       <a href="{% url 'device_inventory:device-list' %}">Back to List</a>
     </div>
