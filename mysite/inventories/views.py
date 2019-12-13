@@ -40,7 +40,7 @@ class DeviceDetailView(DetailView):
         # return Device.objects.filter(pub_date__lte=timezone.now())
         device = self.get_queryset().get(slug__iexact=slug)
         # parts = Part.objects.filter(devices__contains=device)
-        parts = device.parts.all()
+        parts = device.parts.all() #shows all parts available for this device
         context = { 'device': device, 'parts': parts }
         return render(request, 'device.html', context)
 
