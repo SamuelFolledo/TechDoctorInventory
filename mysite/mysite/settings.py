@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY") #hidden in our .env file
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1:8000', '127.0.0.1'] #, 'sf-makewiki-v2.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1:8000', '127.0.0.1', 'techdoctor-site.herokuapp.com/'] #, 'sf-makewiki-v2.herokuapp.com']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Application definition
