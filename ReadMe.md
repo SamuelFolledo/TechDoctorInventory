@@ -51,5 +51,5 @@ Website for TechDoctor to keep track of inventories and repair requests and sche
 - [Playlistr Tutorial](https://www.makeschool.com/academy/track/standalone/playlistr-video-playlists-with-flask-and-mongodb-1c/start-a-flask-project)
 
 ## Deployed websites in Heroku backed by Django
-- [Polling Website](https://polls-v2.herokuapp.com/)
-- [Make Wiki Website](https://sf-makewiki-v2.herokuapp.com/)
+- Polling Website - [GitHub Link](https://github.com/SamuelFolledo/DJango-Starter) or [Live Link](https://polls-v2.herokuapp.com/)
+- Make Wiki Website - [GitHub Link](https://github.com/SamuelFolledo/MakeWiki-v2) or [Live Link](https://sf-makewiki-v2.herokuapp.com/)
