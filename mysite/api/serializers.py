@@ -1,8 +1,8 @@
 from rest_framework.serializers import ModelSerializer
 
-from wiki.models import Page
+from wiki.models import Device
 
-class PageSerializer(ModelSerializer):
+class DeviceSerializer(ModelSerializer):
     class Meta:
-        model = Page
+        model = Device
         fields = '__all__'
