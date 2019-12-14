@@ -134,14 +134,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    # if os.getenv('IS_ON_HEROKU', False):
-    #     STATICFILE_DIRECTORY = 'static'
-    # else:
-    #     STATICFILE_DIRECTORY = 'static/assets'
-    # STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, STATICFILE_DIRECTORY)
-    # ]
-    os.path.join(BASE_DIR, 'static/assets')
+    if os.getenv('IS_ON_HEROKU', False):
+        STATICFILE_DIRECTORY = 'static'
+    else:
+        STATICFILE_DIRECTORY = 'static/assets'
+    STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, STATICFILE_DIRECTORY)
+    ]
+    # os.path.join(BASE_DIR, 'static/assets')
+    # os.path.join(BASE_DIR, "static"),
 ]
 
 # Where to redirect during authentication
