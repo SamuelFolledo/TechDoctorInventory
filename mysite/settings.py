@@ -12,9 +12,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+import django_heroku
+
 #imports fot dotenv for DJANGO_SECRET_KEY
 from dotenv import load_dotenv
-load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,6 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+load_dotenv()
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY") #hidden in our .env file
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -133,7 +135,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') #needed for deployment to heroku
 STATICFILES_DIRS = [
     # os.path.join(BASE_DIR, 'static/assets')
     # os.path.join(BASE_DIR, "static"),
@@ -152,3 +154,5 @@ LOGOUT_REDIRECT_URL = "/" #To logout back to the home page instead of the defaul
 
 # CONSTANTS
 INVENTORY_TITLE_MAX_LENGTH = 500
+
+django_heroku.settings(locals())
