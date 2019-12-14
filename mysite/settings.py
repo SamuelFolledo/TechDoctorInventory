@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
-import django_heroku
+# import django_heroku
 
 #imports fot dotenv for DJANGO_SECRET_KEY
 from dotenv import load_dotenv
@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-load_dotenv()
+# load_dotenv()
 # SECRET_KEY = os.getenv("DJANGO_SECRET_KEY") #hidden in our .env file
 SECRET_KEY = '*wgm^oxm+*n)kff-jek#)do+^g9uk9b#oe9var296lk3@971n6'
 
@@ -156,4 +156,4 @@ LOGOUT_REDIRECT_URL = "/" #To logout back to the home page instead of the defaul
 # CONSTANTS
 INVENTORY_TITLE_MAX_LENGTH = 500
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
