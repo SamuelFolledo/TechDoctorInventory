@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from wiki.models import Device
+from inventories.models import Device
 
 class DeviceSerializer(ModelSerializer):
     class Meta:
