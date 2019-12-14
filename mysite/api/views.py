@@ -1,5 +1,6 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveDestroyAPIView
 
+# from device_inventory.models import Device
 from inventories.models import Device
 from api.serializers import DeviceSerializer
 
