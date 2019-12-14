@@ -8,32 +8,32 @@ Website for TechDoctor to keep track of inventories and repair requests and sche
 ## Screenshots
 ### Device Lists - without User
 - Home page without a user logged in, with a login and signup button on the nav bar
-<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/device_list.png" width="465" height="828">
+<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/device_list.png">
 
 ### Device Lists - with User
 - With user logged in and have their username displayed and a logout button on the nav bar
-<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/user-devices_list.png" width="465" height="828">
+<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/user-devices_list.png">
 
 ### Device Detail / Parts List
 - When user clicks a device's See Repairable Parts button, then it will show a list of available parts specifically for that device
-<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/user-parts_list.png" width="465" height="828">
+<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/user-parts_list.png">
 
 ### Login Screen
 - Page for user to login and receive its token
-<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/login_screen.png" width="465" height="828">
+<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/login_screen.png">
 
 ### Signup Screen
 - Page for user to sign up and create an account with some security and simple password detector
-<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/signup.png" width="465" height="828">
+<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/signup.png">
 
 ## Admin Page
 ### Admin Parts
 - Admin page which displays the list of parts which can be sorted, search by title, filtered, and removed, and edited
-<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/admin_parts.png" width="465" height="828">
+<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/admin_parts.png">
 
 ### Admin Devices
 - Admin page which displays the list of devices as well as create, read, update, or delete
-<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/admin_device.png" width="465" height="828">
+<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/admin_device.png">
 
 
 ## Challenges
