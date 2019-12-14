@@ -1,9 +1,9 @@
 from django.urls import path
 
-from api.views import DeviceListView, DeviceDetailView, DeviceResultsView
+from api.views import DeviceList, DeviceDetail
 
 
 urlpatterns = [
-    path('', DeviceListView.as_view(), name='device-list'),
-    path('<str:slug>/', DeviceDetailView.as_view(), name='device-detail'),
+    path('', DeviceList.as_view(), name='device-list'),
+    path('<str:slug>/', DeviceDetail.as_view(), name='device-detail'),
 ]
