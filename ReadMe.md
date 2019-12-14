@@ -20,11 +20,11 @@ Website for TechDoctor to keep track of inventories and repair requests and sche
 
 ### Login Screen
 - Page for user to login and receive its token
-<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/gameStart.png" width="465" height="828">
+<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/login_screen.png" width="465" height="828">
 
 ### Signup Screen
 - Page for user to sign up and create an account with some security and simple password detector
-<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/gameStart.png" width="465" height="828">
+<img src="https://github.com/SamuelFolledo/TechDoctorInventory/blob/master/static/screenshots/signup.png" width="465" height="828">
 
 ## Admin Page
 ### Admin Parts
