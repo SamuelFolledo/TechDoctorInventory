@@ -10,7 +10,7 @@
         {{ device.content|truncatewords_html:30 }}
 
         <hr>
-        <div class="text-right"><a href="{% url 'device_inventory:device-detail' device.slug %}" title="See Repairs">See Repairs</a></div>
+        <div class="text-right"><a href="{% url 'device_inventory:device-detail' device.slug %}" title="See Repairable Parts">See Repairable Parts</a></div>
     </div>
     <div class="card-footer">
       <small class="text-muted">Last updated {{ device.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ device.author.username }}</b></small>
